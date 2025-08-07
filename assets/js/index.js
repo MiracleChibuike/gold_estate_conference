@@ -52,4 +52,18 @@ document.querySelectorAll("img").forEach((img) =>  {
     img.addEventListener("mousedown", (e) => {
         e.preventDefault()
     })
+});
+
+// Scroll Left and right Toggle
+let leftScroll = document.getElementById("scroll_left");
+let rightScroll = document.getElementById("scroll_right");
+let registration_Container = document.querySelector(".details_reg_Cards");
+const scrollAmount = 310; // This matches my cards width by default
+leftScroll.addEventListener("click", () => {
+  registration_Container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+});
+
+rightScroll.addEventListener("click", () => {
+  registration_Container.scrollBy({left: scrollAmount, behavior: "smooth"})
 })
+

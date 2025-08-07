@@ -1,10 +1,10 @@
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Comfortaa:wght@300..700&family=Dancing+Script&family=Epilogue:ital,wght@0,100..900;1,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost&family=Kalam&family=Kanit&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Display:wght@600&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Odibee+Sans&family=PT+Sans+Narrow&family=Playwrite+ZA+Guides&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&family=Signika+Negative:wght@300..700&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Yesteryear&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "inter", "san-serif";
+    font-family: "Epilogue", "san-serif";
 }
 
 :root{
@@ -28,6 +28,8 @@
 .hero_Contents{
     display: flex;
     justify-content: space-between;
+      animation: fadeInUpScale 0.8s ease-out forwards;
+  opacity: 0;
 }
 #goldBtn{
     margin: 15px 0 0 0;
@@ -145,14 +147,16 @@
 #professionals{
     background: var(--clr-conf-Gray-bg);
     padding: 40px 100px;
+    animation: fadeInUpScale 0.8s ease-out forwards;
+  opacity: 0;
 }
 
-.profHeadre, .expertsHeadre, .conf_header{
+.profHeadre, .expertsHeadre, .conf_header, .deatilsHeader{
    text-align: center;
    line-height: 1.3;
    margin-bottom: 20px;
 }
-.profHeadre h2, .expertsHeadre h2, .conf_header h2{
+.profHeadre h2, .expertsHeadre h2, .conf_header h2, .deatilsHeader h2{
     font-size: 3rem;
     font-weight: 500;
     font-style: medium;
@@ -185,6 +189,8 @@
 /* Experts */
 #Experts{
     padding: 40px 100px;
+    animation: fadeInUpScale 0.8s ease-out forwards;
+  opacity: 0;
 }
 .expertsCard{
     display: grid;
@@ -235,6 +241,9 @@
 /* Topics Section */
 #conf_topics{
     padding: 40px 100px;
+     background: var(--clr-conf-Gray-bg);
+     animation: fadeInUpScale 0.8s ease-out forwards;
+  opacity: 0;
 }
 .main_topics_card{
     display: grid;
@@ -280,9 +289,128 @@ text-align: center;
     border-radius: 5px;
     font-weight: bold;
 }
+/* Expect */
+#expect{
+    margin: 40px 0 0 0;
+    padding: 0 50px;
+    animation: fadeInUpScale 0.8s ease-out forwards;
+  opacity: 0;
+}
+.expect_Content{
+    background: var(--conf-gray-main);
+    border-radius: 10px;
+    padding: 30px 0;
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.expect_Cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px 0;
+    text-align: center;
+}
+.cardExpect{
+    border-radius: 10px;
+    transition: transform 0.9s ease;
+    padding: 10px 20px;
+}
+.cardExpect:hover{
+    cursor: pointer;
+    background: var(--clr-conf-Gray-bg);
+    transform: translate3d(10px, 10px, 0);
+}
+
+/* Conference Details & Registrations */
+#details_registration{
+    padding: 40px 100px;
+    animation: fadeInUpScale 0.8s ease-out forwards;
+  opacity: 0;
+}
+.details_reg_Cards{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+    margin: 45px 0;
+}
+.registration_card{
+    border-radius: 10px;
+    border: 1px solid var(--clr-conf-blue);
+    padding: 35px 20px;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.9s ease, background-color 0.9s ease;
+}
+.registration_card:hover{
+    cursor: pointer;
+    background: var(--clr-conf-Gray-bg);
+    border: 1px solid var(--clr-conf-Gray-bg);
+     box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.img_Details{
+    margin-bottom: 30px;
+}
+.img_Details img{
+       box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+       padding: 10px;
+       border-radius: 10px;
+}
+.details_title{
+    margin-bottom: 8px;
+}
+.scroll_Icons{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -160px;
+    content-visibility: hidden;
+}
+.scroll_Icons i{
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 4px 1px var(--clr-conf-blue); */
+    background: var(--clr-conf-Gold-bg);
+    cursor: pointer;
+}
+.venueInfo{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
+}
+.venueLocationImportant, .venueOrganizers{
+    background: var(--clr-conf-Gold-bg);
+    border-radius: 7.8px;
+    padding: 35px 45px;
+    animation: fadeInUpScale 0.8s ease-out forwards;
+  opacity: 0;
+    /* animation-name: venueHue;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: 1; */
+    transition: transform 0.8s ease, background-color 0.8s ease;
+}
+@keyframes fadeInUpScale {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.venueLocationImportant{
+    display: flex;
+    justify-content: space-between;
+}
+.venueInfoImg{
+    position: relative;
+    top: -10px;
+}
 /* Media Querry for Mobiles */
 @media screen and (min-width: 0) and (max-width: 700px) {
-    #hero, #professionals, #Experts, #conf_topics{
+    #hero, #professionals, #Experts, #conf_topics, #details_registration{
          padding: 10px 20px;
     }
     /* #hero{
@@ -299,6 +427,9 @@ text-align: center;
     .hero_Contents h2{
         font-size: 2.5rem;
     }
+    .profHeadre h2, .expertsHeadre h2, .conf_header h2, .deatilsHeader h2{
+        font-size: 2rem;
+    }
     .heroImg{
         margin: 30px 0;
     }
@@ -307,6 +438,11 @@ text-align: center;
     }
     #heroImgMobile{
         display: block;
+    }
+    .event_target_ics{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 
     /* Professionals */
@@ -318,10 +454,46 @@ text-align: center;
    .main_topics_card{
     grid-template-columns: auto;
    }
-    
+   /* Expect */
+   #expect{
+     padding: 0 30px;
+   }
+   .expect_Cards{
+    display: block;
+    padding: 0 20px;
+   }
+   .cardExpect{
+    margin: 25px 0;
+    background: var(--clr-conf-Gray-bg);
+    padding: 10px 20px;
+    border-radius: 10px;
+   }
+   /* Registration Details */
+   .details_reg_Cards{
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    }
+    .details_reg_Cards::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+   }
+   .scroll_Icons{
+    content-visibility: visible;
+    scroll-behavior: smooth;
+   }
+   /* Venue Info */
+   .venueInfo, .venueLocationImportant{
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+   }
+    .venueInfoImg{
+    position: relative;
+    top: 15px;
+}
 }
 /* Media for iPads */
-@media screen and (min-width: 700px) and (max-width: 1020px) {
+@media screen and (min-width: 700px) and (max-width: 1025px) {
       #hero, #professionals{
          padding: 10px 20px;
     }
@@ -336,5 +508,26 @@ text-align: center;
         grid-template-columns: auto auto;
         row-gap: 30px;
    }
+   /* Registration */
+   .details_reg_Cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  /* Venue Info */
+   .venueInfo{
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+   }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1350px) {
+      /* Registration */
+   .details_reg_Cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 }
 
