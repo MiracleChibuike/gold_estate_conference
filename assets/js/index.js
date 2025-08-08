@@ -1,4 +1,39 @@
+// Security
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
 
+// Disable copy event
+document.addEventListener("copy", function (e) {
+  e.preventDefault();
+});
+
+// Disable cut event
+document.addEventListener("cut", function (e) {
+  e.preventDefault();
+});
+
+// Disable text selection manually
+// document.addEventListener("selectstart", function (e) {
+//   e.preventDefault();
+// });
+// document.addEventListener("contextmenu", (e) => e.preventDefault());
+
+// document.addEventListener("keydown", (e) => {
+//   // Block Ctrl+S / Cmd+S
+//   if ((e.ctrlKey || e.metaKey) && e.key === "s") {
+//     e.preventDefault();
+//   }
+
+//   // Block F12, Ctrl+U, Ctrl+Shift+I
+//   if (
+//     e.key === "F12" ||
+//     ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "u") ||
+//     ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key.toLowerCase() === "i")
+//   ) {
+//     e.preventDefault();
+//   }
+// });
 let daysCounter = document.getElementById("days");
 let hoursCounter = document.getElementById("hours");
 let minutesCounter = document.getElementById("minutes");
@@ -65,5 +100,8 @@ leftScroll.addEventListener("click", () => {
 
 rightScroll.addEventListener("click", () => {
   registration_Container.scrollBy({left: scrollAmount, behavior: "smooth"})
-})
+});
+
+
+
 

@@ -17,6 +17,15 @@
     --clr-conf-white: #fff;
     --clr-button-gold-bg: rgba(32, 32, 31, 1);
 }
+
+/* Security */
+body {
+  user-select: none;        /* Modern browsers */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
+
 /* Hero Section */
 #hero{
     padding: 40px 100px;
@@ -91,7 +100,7 @@
         color: var(--clr-conf-white);
         border-radius: 5px;
             padding: 8px 12px;
-
+    margin-bottom: 5px;
 }
 .countdown div p{
     margin: 2px 0;
@@ -119,9 +128,10 @@
 }
 .registerActions button{
     background: var(--clr-gold-hero);
-    padding: 10px 12px;
+    padding: 15px 12px;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
 }
 #viewTopics{
     margin-left: 18px;
@@ -151,16 +161,18 @@
   opacity: 0;
 }
 
-.profHeadre, .expertsHeadre, .conf_header, .deatilsHeader{
+.profHeadre, .expertsHeadre, .conf_header, .deatilsHeader, .registration_heder{
    text-align: center;
    line-height: 1.3;
    margin-bottom: 20px;
 }
-.profHeadre h2, .expertsHeadre h2, .conf_header h2, .deatilsHeader h2{
+.profHeadre h2, .expertsHeadre h2, .conf_header h2, .deatilsHeader h2, 
+.registration_heder h2{
     font-size: 3rem;
     font-weight: 500;
     font-style: medium;
     margin: 5px 0;
+    /* color: var(--clr-conf_Gold); */
 }
 /* Professional Section */
 .professionals_Cards{
@@ -198,7 +210,7 @@
     gap: 45px;
 }
 .expertsCard > .card{
-    background: var(--clr-conf-Gray-bg);
+    background: var(--clr-gold-hero);
     border-radius: 10px;
     box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
     transition: transform 0.9s ease, background-color 0.9s ease;
@@ -208,13 +220,10 @@
     transform: translate3d(20px, 30px, 0);
 
 }
-.imgPlaceholder{
-    background: var(--clr-conf-blue);
-    /* border-top-left-radius: 20px;
-    border-top-right-radius: 20px; */
-}
 .imgPlaceholder img{
     width: 100%;
+    border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
 }
 /* #cardImage{
  border-top-left-radius: 20px;
@@ -408,15 +417,158 @@ text-align: center;
     position: relative;
     top: -10px;
 }
+
+/* Registration Form */
+#resgistration_form{
+    padding: 40px 100px;
+}
+#resgistration_form hr{
+    border-top-width: 2px;
+    position: relative;
+    top: -20px;
+}
+/* .resgistration_Form_Card_option{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px;
+   margin-top: 50px;
+} */
+ .resgistration_Form_Card_option {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 25px;
+    margin-top: 50px;
+    align-items: end; /* Align all items to the bottom line */
+}
+.resgistration_Form_Card_option .card.middle {
+    height: 350px; /* Taller height for the middle one */
+}
+
+.resgistration_Form_Card_option .card:not(.middle) {
+    height: 270px; /* Shorter height for the side ones */
+}
+
+.reg_card{
+    border: 1px solid var(--clr-conf_Gold);
+    border-radius: 20px;
+    padding: 35px 5px;
+    text-align: center;
+     transition: transform 0.9s ease;
+}
+.reg_card:hover{
+    transform: translateY(12px);
+    cursor: pointer;
+}
+.reg-type{
+    color: var(--clr-conf_Gold);
+    margin: 10px 0;
+}
+.price_info{
+    margin: 25px 0;
+}
+.price_info h2{
+    margin-bottom:8px ;
+}
+#discount_btn{
+    background: var(--clr-conf_Gold);
+    padding: 12px 45px;
+    border: none;
+    box-shadow: 0 4px 4px 4px 1px var(--clr-conf_Gold);
+    margin-bottom: 13px;
+    transition: transform 0.9s ease;
+}
+#discount_btn:hover{
+    box-shadow:  0 0 10px var(--clr-gold-hero);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+/* #vipPass{
+    transform: translateY(-50px);
+} */
+ #vipPass > #_Most{
+    position: relative;
+    top: -60px;
+    border: none;
+    border-radius: 20px;
+    padding: 13px 45px;
+    background: var(--clr-conf_Gold);
+ }
+.reg_card ul{
+    list-style-type: none;
+}
+.reg_card ul li{
+    padding: 5px 0;
+}
+.reg_card ul li i{
+    padding-right: 8px;
+}
+/* Discalimer */
+.disclaimerContainer{
+    background: var(--clr-conf-Gold-bg);
+    padding: 30px;
+    border: 1px solid var(--clr-conf-blue);
+    border-radius: 10px;
+    margin: 20px 50px;
+    line-height: 1.5;
+}
+/* Footer Section */
+#footer{
+    background: var(--clr-conf-blue);
+    color: var(--conf-gray-main);
+    padding: 40px 100px;
+}
+.footer_contents{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.formNews{
+    margin: 35px 0;
+}
+.newsForm input{
+    border: 1px solid var(--conf-gray-main);
+    background: rgba(139, 136, 136, 0.2);
+    border-radius: 10px;
+    padding: 13px 9px;
+    width: 300px;
+    color: var(--conf-gray-main);
+}
+.newsForm button{
+    border-radius: 10px;
+    padding: 13px 30px;
+    font-weight: bold;
+    border: none;
+    background: var(--clr-gold-hero);
+    margin-left: 10px;
+}
+.footer_organize{
+    display: flex;
+}
+.bitmaps_footer{
+    margin-left: 20px;
+}
+.footer_Contacts p{
+    margin: 17px 0;
+}
+.footer_Contacts a{
+    text-decoration: none;
+    color: var(--conf-gray-main);
+}
+.footer_Contacts p img{
+    position: relative;
+    top: 5px;
+    padding: 0 8px;
+}
 /* Media Querry for Mobiles */
 @media screen and (min-width: 0) and (max-width: 700px) {
-    #hero, #professionals, #Experts, #conf_topics, #details_registration{
+    #hero, #professionals, #Experts, #conf_topics, #details_registration
+    , #resgistration_form, #footer{
          padding: 10px 20px;
     }
     /* #hero{
         height: 140vh;
     } */
-    .hero_Contents{
+    .hero_Contents, .footer_contents{
         display: block;
     }
     .countdown{
@@ -427,7 +579,8 @@ text-align: center;
     .hero_Contents h2{
         font-size: 2.5rem;
     }
-    .profHeadre h2, .expertsHeadre h2, .conf_header h2, .deatilsHeader h2{
+    .profHeadre h2, .expertsHeadre h2, .conf_header h2, .deatilsHeader h2, 
+    .registration_heder h2{
         font-size: 2rem;
     }
     .heroImg{
@@ -451,7 +604,7 @@ text-align: center;
         row-gap: 30px;
    }
    /* Conf Cards */
-   .main_topics_card{
+   .main_topics_card, .resgistration_Form_Card_option{
     grid-template-columns: auto;
    }
    /* Expect */
@@ -462,11 +615,14 @@ text-align: center;
     display: block;
     padding: 0 20px;
    }
-   .cardExpect{
+   .cardExpect, .disclaimerContainer{
     margin: 25px 0;
     background: var(--clr-conf-Gray-bg);
     padding: 10px 20px;
     border-radius: 10px;
+   }
+   .disclaimerContainer{
+    background: var(--clr-conf-Gold-bg);
    }
    /* Registration Details */
    .details_reg_Cards{
@@ -491,10 +647,28 @@ text-align: center;
     position: relative;
     top: 15px;
 }
+/* Footer */
+.rightFooter{
+    margin: 35px 0;
+}
+.footer_Contacts{
+    margin: 15px 0;
+}
+.footer_Contacts p{
+    margin: 17px 0;
+}
+.bitmaps_footer{
+    margin-left: 5px;
+}
+.newsForm button, .newsForm input{
+    width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+}
 }
 /* Media for iPads */
 @media screen and (min-width: 700px) and (max-width: 1025px) {
-      #hero, #professionals{
+      #hero, #professionals, #resgistration_form, #footer{
          padding: 10px 20px;
     }
       .hero_Contents{
@@ -504,7 +678,7 @@ text-align: center;
         margin: 30px 0;
     }
        /* Professionals */
-   .professionals_Cards, .expertsCard{
+   .professionals_Cards, .expertsCard, .resgistration_Form_Card_option{
         grid-template-columns: auto auto;
         row-gap: 30px;
    }
@@ -524,7 +698,7 @@ text-align: center;
 
 @media screen and (min-width: 1025px) and (max-width: 1350px) {
       /* Registration */
-   .details_reg_Cards{
+   .details_reg_Cards, .resgistration_Form_Card_option{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
