@@ -103,5 +103,24 @@ rightScroll.addEventListener("click", () => {
 });
 
 
+// Scroll Left and right Toggle in Experts Card
+let left_scroll_Expert = document.getElementById("scroll_left_Experts")
+let right_Scroll_Expert = document.getElementById("scroll_right_Experts");
+let expertsContainer = document.querySelector(".expertsCard");
+const expertsScrollAmount = 310;
+left_scroll_Expert.addEventListener("click", () => {
+  expertsContainer.scrollBy({left: -expertsScrollAmount, behavior: "smooth"})
+});
+right_Scroll_Expert.addEventListener("click", () => {
+  expertsContainer.scrollBy({left: expertsScrollAmount, behavior:"smooth" })
+})
 
 
+// Add scroll event
+// let registerAction = document.querySelector(".registerActions");
+// const scrollTop = () => {
+//   if (window.scrollY > 0) {
+//     registerAction.classList.add("scrollAdd");
+//   }
+// };
+// window.addEventListener("scroll", scrollTop)
