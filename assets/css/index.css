@@ -439,6 +439,9 @@ text-align: center;
     position: relative;
     top: -10px;
 }
+#venueLocate{
+    width: 300px;
+}
 
 /* Registration Form */
 #resgistration_form{
@@ -677,6 +680,9 @@ text-align: center;
     position: relative;
     top: 15px;
 }
+#venueLocate{
+    width: 100%;
+}
 /* Footer */
 .rightFooter{
     margin: 35px 0;
@@ -732,6 +738,9 @@ text-align: center;
     margin: 20px 0;
     text-align: center;
    }
+   #venueLocate{
+    width: 100%;
+}
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1350px) {
